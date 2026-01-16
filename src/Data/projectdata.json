@@ -2,9 +2,9 @@
   "projects": [
     {
       "id": "asteroids-3d",
-      "title": "Asteroids 3D",
-      "tagline": "Een moderne 3D-remake van de arcade klassieker.",
-      "description": "Asteroids 3D is een moderne remake van de klassieke arcade game. Het doel was om physics-based movement te combineren met een minimalistische sci-fi stijl. Door veel playtesting vond ik de perfecte balans tussen thrust force, rotation speed en projectile velocity.\n\nTijdens het project focuste ik op iteratief werken en het snel ontwikkelen van speelbare prototypes. Daarbij heb ik veel geleerd over component-based architecture, het gebruik van ScriptableObjects voor game balancing en het implementeren van object pooling voor betere performance.",
+      "title": "VR store",
+      "tagline": "Een magische VR winkel",
+      "description": "Een VR Store die alles in je dromen verkoopt en ook een anti theft systeem ingebouwd heeft een automatische deur en nog veel meer.",
       "thumbnail": "https://picsum.photos/seed/asteroids/1200/600",
       "youtube": "https://www.youtube.com/embed/dQw4w9WgXcQ",
       "screenshots": [
@@ -17,8 +17,8 @@
         "3D",
         "Physics"
       ],
-      "projectRole": "Gameplay Programmer",
-      "timeline": "2 weken",
+      "projectRole": "Was een solo project dus ik deed alles",
+      "timeline": "4 weken",
       "mechanics": [
         {
           "subtitle": "Movement System",

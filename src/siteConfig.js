@@ -13,7 +13,8 @@ export const siteConfig = {
   },
 
   aboutLong: `
-    ik ben een persoon 
+    ik ben een persoon
+   
   `,
 
   softSkills: ["Samenwerken met artists die niet fucking stinken", "Feedback geven & ontvangen", "Probleemoplossend denken"],
