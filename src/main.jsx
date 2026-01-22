@@ -6,7 +6,7 @@ import App from "./App";
 import Home from "./pages/home";
 import About from "./pages/about";
 import Contact from "./pages/contact";
-import ProjectPage from "./pages/ProjectPage";
+import ProjectPage from "./pages/ProjectPage";  
 
 import "./index.css";
 
