@@ -13,6 +13,7 @@ export default defineConfig({
       input: {
         main: 'index.html',
         '404': 'index.html',
+        
       },
     },
   },
