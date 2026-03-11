@@ -1,26 +1,25 @@
 export const siteConfig = {
-  name: "Nigger mick",
-  role: "XR Developer",
-  tagline: "Ik bouw interactieve XR-ervaringen die zich natuurlijk en intuïtief aanvoelen.",
-  aboutImage: "https://api.dicebear.com/7.x/notionists/png?seed=portfolio",
+  name: "Casper Winkel",
+  role: "XR Developer & Creative Coder",
+  tagline: "Ik bouw immersive werelden en digitale experimenten die de grenzen van interactie verleggen.",
+  aboutImage: "https://api.dicebear.com/7.x/notionists/png?seed=casperwinkel",
   cv: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
 
   socials: {
-    email: "jane.doe@example.com",
-    github: "https://github.com/",
-    linkedin: "https://linkedin.com/",
-    itch: "https://itch.io/",
+    email: "casper.winkel@example.com",
+    github: "https://github.com/glovelesss",
+    linkedin: "https://linkedin.com/in/casperwinkel",
+    itch: "https://glovelesss.itch.io",
   },
 
   aboutLong: `
-    Ik ben een XR Developer die energie krijgt van het bouwen van interactieve, 
-    fysieke en intuïtieve ervaringen in VR en AR. Voor mij draait goede XR niet 
-    alleen om technologie, maar vooral om hoe gebruikers een digitale wereld 
-    *voelen*. Ik werk graag iteratief met prototypes: snel testen, verbeteren en 
-    opnieuw testen — net zo lang tot interacties natuurlijk en prettig aanvoelen.
-
-    Ik ga deze tekst aanpassen en een stuk persoonlijker maken door ook iets leuks
-    over mijzelf te vertellen!
+    Hoi, ik ben Casper Winkel! Een gepassioneerde XR Developer die energie krijgt van het bouwen van interactieve, 
+    fysieke en intuïtieve ervaringen in Virtual en Augmented Reality. Voor mij draait goede XR niet 
+    alleen om de techniek, maar vooral om hoe gebruikers een digitale wereld daadwerkelijk *voelen* en ervaren. 
+    
+    Tijdens hackathons (zoals de Glu Game Jam) en in professionele trajecten werk ik graag iteratief met prototypes: 
+    snel bouwen, grondig testen, en constant polijsten. Mijn uiteindelijke doel is om XR-toepassingen te ontwikkelen 
+    die zo natuurlijk aanvoelen, dat de interface zelf onzichtbaar wordt.
   `,
 
   softSkills: ["Samenwerken met artists die niet fucking stinken", "Feedback geven & ontvangen", "Probleemoplossend denken"],

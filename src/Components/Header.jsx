@@ -23,7 +23,7 @@ export default function Header() {
         <Link 
           to="/" 
           onClick={scrollToTop}
-          className="text-xl font-bold text-(--accent) hover:opacity-80 transition-opacity"
+          className="text-xl font-bold text-(--accent) smooth-transition hover:text-(--accent-hover) hover:scale-105 inline-block"
         >
           Portfolio
         </Link>
@@ -33,10 +33,10 @@ export default function Header() {
           <Link
             to="/"
             onClick={scrollToTop}
-            className={`transition-colors ${
+            className={`smooth-transition px-3 py-1 rounded-md ${
               isActive("/") 
-                ? "text-(--accent) font-semibold" 
-                : "text-(--muted) hover:text-(--text)"
+                ? "bg-(--accent)/10 text-(--accent) font-semibold" 
+                : "text-(--muted) hover:text-(--text) hover:bg-(--surface)"
             }`}
           >
             Projects
@@ -45,10 +45,10 @@ export default function Header() {
           <Link
             to="/about"
             onClick={scrollToTop}
-            className={`transition-colors ${
+            className={`smooth-transition px-3 py-1 rounded-md ${
               isActive("/about") 
-                ? "text-(--accent) font-semibold" 
-                : "text-(--muted) hover:text-(--text)"
+                ? "bg-(--accent)/10 text-(--accent) font-semibold" 
+                : "text-(--muted) hover:text-(--text) hover:bg-(--surface)"
             }`}
           >
             Over Mij
@@ -57,10 +57,10 @@ export default function Header() {
           <Link
             to="/contact"
             onClick={scrollToTop}
-            className={`transition-colors ${
+            className={`smooth-transition px-3 py-1 rounded-md ${
               isActive("/contact") 
-                ? "text-(--accent) font-semibold" 
-                : "text-(--muted) hover:text-(--text)"
+                ? "bg-(--accent)/10 text-(--accent) font-semibold" 
+                : "text-(--muted) hover:text-(--text) hover:bg-(--surface)"
             }`}
           >
             Contact
