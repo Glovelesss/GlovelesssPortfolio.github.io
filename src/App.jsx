@@ -6,8 +6,8 @@ export default function App() {
       {/* Header komt hier */}
       <header className="bg-(--surface)/80 p-4 border-b border-(--bordercolor) sticky top-0 z-50 backdrop-blur-md">
         <div className="container mx-auto flex justify-between items-center">
-          <Link to="/" className="text-xl font-bold tracking-tighter">
-            <span className="text-(--accent)">G</span>LOVESLESSS
+          <Link to="/" className="text-xl font-bold tracking-tighter uppercase">
+            <span className="text-(--accent)">G</span>loveless
           </Link>
           <nav className="flex gap-8 text-sm font-medium">
             <Link to="/" className="hover:text-(--accent) transition-colors">Projecten</Link>

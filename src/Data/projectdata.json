@@ -63,8 +63,8 @@
           "code": "void SpawnAsteroid()\n{\n    Vector3 pos = Random.onUnitSphere * spawnRadius;\n    float size = Random.Range(0.5f, 2.5f);\n\n    GameObject ast = Instantiate(asteroidPrefab, pos, Random.rotation);\n    ast.transform.localScale = Vector3.one * size;\n\n    Rigidbody rb = ast.GetComponent<Rigidbody>();\n    rb.AddForce(Random.onUnitSphere * Random.Range(5,15), ForceMode.Impulse);\n}"
         }
       ],
-      "git": "https://github.com/glovelesss/asteroids-3d",
-      "itch": "https://glovelesss.itch.io/asteroids-3d"
+      "git": "https://github.com/gloveless/asteroids-3d",
+      "itch": "https://gloveless.itch.io/asteroids-3d"
     },
     {
       "id": "xr-escape-room",
@@ -163,7 +163,7 @@
           "code": "bool ValidateHandPose(HandPose required)\n{\n    float similarity = Vector3.Dot(\n        currentPose.palmNormal,\n        required.palmNormal\n    );\n\n    return similarity > 0.95f;\n}"
         }
       ],
-      "git": "https://github.com/glovelesss/vr-training-sim",
+      "git": "https://github.com/gloveless/vr-training-sim",
       "itch": ""
     },
     {
@@ -200,7 +200,7 @@
         }
       ],
       "git": "",
-      "itch": "https://glovelesss.itch.io/ar-museum"
+      "itch": "https://gloveless.itch.io/ar-museum"
     }
   ]
 }

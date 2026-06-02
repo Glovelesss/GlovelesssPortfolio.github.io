@@ -7,9 +7,9 @@ export const siteConfig = {
 
   socials: {
     email: "casper.winkel@example.com",
-    github: "https://github.com/glovelesss",
+    github: "https://github.com/gloveless",
     linkedin: "https://linkedin.com/in/casperwinkel",
-    itch: "https://glovelesss.itch.io",
+    itch: "https://gloveless.itch.io",
   },
 
   aboutLong: `
