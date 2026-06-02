@@ -1,11 +1,11 @@
 import { siteConfig } from "../siteConfig";
-import ProjectCard from "../Components/ProjectCard";
+import ProjectOrbit from "../Components/ProjectOrbit";
 import projectData from "../Data/projectdata.json";
 import PageTransition from "../Components/PageTransition";
 import { motion } from "framer-motion";
 
 export default function Home() {
-  const projects = projectData.projects; 
+  const projects = projectData.projects.filter(p => p.category !== "game-jam");
 
   // Framer Motion variant for container staggering
   const containerVariants = {
@@ -118,31 +118,8 @@ export default function Home() {
               Mijn Projecten
             </motion.h2>
 
-            {/* Grid met ProjectCards (Bento Style) */}
-            <motion.div 
-              className="grid grid-cols-1 md:grid-cols-12 gap-6"
-              variants={containerVariants}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true, margin: "-50px" }}
-            >
-              {projects.map((project, index) => (
-                <motion.div 
-                  key={project.id} 
-                  variants={itemVariants}
-                  className={`${
-                    index === 0 ? "md:col-span-8 md:row-span-2" : 
-                    index === 1 ? "md:col-span-4 md:row-span-1" :
-                    index === 2 ? "md:col-span-4 md:row-span-1" :
-                    index === 3 ? "md:col-span-6 md:row-span-1" :
-                    index === 4 ? "md:col-span-6 md:row-span-1" :
-                    "md:col-span-4"
-                  }`}
-                >
-                  <ProjectCard project={project} isLarge={index === 0} index={index} />
-                </motion.div>
-              ))}
-            </motion.div>
+            {/* 3D Coverflow Project Orbit */}
+            <ProjectOrbit projects={projects} />
           </div>
         </section>
         

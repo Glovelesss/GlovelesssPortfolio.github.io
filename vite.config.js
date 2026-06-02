@@ -3,17 +3,16 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
 // Zet hier de NAAM van jouw GitHub repository!
-const basePath = '/GlovelesssPortfolio.github.io/';
+const basePath = '/GlovelesssPortfolio.github.io';
 
 export default defineConfig({
-  plugins: [tailwindcss(), react() ],
+  plugins: [tailwindcss(), react()],
   base: basePath,
   build: {
     rollupOptions: {
       input: {
         main: 'index.html',
         '404': 'index.html',
-        
       },
     },
   },

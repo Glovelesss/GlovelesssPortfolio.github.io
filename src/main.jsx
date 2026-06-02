@@ -9,6 +9,8 @@ import Contact from "./pages/contact";
 import ProjectDetail from "./pages/ProjectDetail";
 import Lab from "./pages/Lab";
 
+import GameJams from "./pages/GameJams";
+
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
@@ -18,6 +20,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/" element={<App />}>
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
+          <Route path="game-jams" element={<GameJams />} />
           <Route path="contact" element={<Contact />} />
           <Route path="projects/:id" element={<ProjectDetail />} />
           <Route path="lab" element={<Lab />} />

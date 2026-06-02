@@ -6,7 +6,6 @@ import { motion, AnimatePresence } from "framer-motion";
 const Whiteboard = ({ color, setColor, brushSize, setBrushSize }) => {
   const canvasRef = useRef(null);
   const [isDrawing, setIsDrawing] = useState(false);
-  const [rotation, setRotation] = useState(0);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -14,8 +13,20 @@ const Whiteboard = ({ color, setColor, brushSize, setBrushSize }) => {
 
     const resizeCanvas = () => {
       const parent = canvas.parentElement;
+      // Save existing drawing
+      const tempCanvas = document.createElement("canvas");
+      tempCanvas.width = canvas.width;
+      tempCanvas.height = canvas.height;
+      tempCanvas.getContext("2d").drawImage(canvas, 0, 0);
+
       canvas.width = parent.clientWidth;
       canvas.height = parent.clientHeight;
+
+      // Restore drawing
+      const ctx = canvas.getContext("2d");
+      ctx.drawImage(tempCanvas, 0, 0);
+      ctx.lineCap = "round";
+      ctx.lineJoin = "round";
     };
 
     resizeCanvas();
@@ -25,54 +36,46 @@ const Whiteboard = ({ color, setColor, brushSize, setBrushSize }) => {
     ctx.lineCap = "round";
     ctx.lineJoin = "round";
 
-    let animationFrame;
-    const animate = () => {
-      setRotation(prev => (prev + 1.5) % 360); // Slower spin
-      animationFrame = requestAnimationFrame(animate);
-    };
-    animate();
-
     return () => {
-      cancelAnimationFrame(animationFrame);
       window.removeEventListener("resize", resizeCanvas);
     };
   }, []);
+
+  const getPos = (e) => {
+    const canvas = canvasRef.current;
+    const rect = canvas.getBoundingClientRect();
+    return {
+      x: e.clientX - rect.left,
+      y: e.clientY - rect.top,
+    };
+  };
+
+  const startDrawing = (e) => {
+    const canvas = canvasRef.current;
+    const ctx = canvas.getContext("2d");
+    const { x, y } = getPos(e);
+    ctx.beginPath();
+    ctx.moveTo(x, y);
+    setIsDrawing(true);
+  };
 
   const draw = (e) => {
     if (!isDrawing) return;
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
-    const rect = canvas.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
+    const { x, y } = getPos(e);
 
     ctx.strokeStyle = color;
     ctx.lineWidth = brushSize;
-
-    ctx.save();
-    ctx.translate(x, y);
-    ctx.rotate((rotation * Math.PI) / 180);
-    
-    ctx.beginPath();
-    const shapeType = Math.floor((x + y) / 50) % 4;
-    
-    if (shapeType === 0) {
-      ctx.moveTo(-brushSize * 2, 0); ctx.lineTo(brushSize * 2, 0);
-    } else if (shapeType === 1) {
-      ctx.moveTo(0, -brushSize); ctx.lineTo(brushSize, brushSize); ctx.lineTo(-brushSize, brushSize); ctx.closePath();
-    } else if (shapeType === 2) {
-      ctx.rect(-brushSize/2, -brushSize/2, brushSize, brushSize);
-    } else {
-      ctx.moveTo(-brushSize, -brushSize); ctx.lineTo(brushSize, brushSize); ctx.moveTo(brushSize, -brushSize); ctx.lineTo(-brushSize, brushSize);
-    }
-    
-    ctx.stroke();
-    ctx.restore();
-
     ctx.lineTo(x, y);
     ctx.stroke();
+  };
+
+  const stopDrawing = () => {
+    setIsDrawing(false);
+    const canvas = canvasRef.current;
+    const ctx = canvas.getContext("2d");
     ctx.beginPath();
-    ctx.moveTo(x, y);
   };
 
   const clearCanvas = () => {
@@ -99,14 +102,14 @@ const Whiteboard = ({ color, setColor, brushSize, setBrushSize }) => {
       <div className="flex-1 min-h-[400px] bg-(--bg) rounded-xl cursor-crosshair overflow-hidden touch-none border border-(--bordercolor) relative">
         <canvas
           ref={canvasRef}
-          onMouseDown={(e) => { setIsDrawing(true); draw(e); }}
-          onMouseUp={() => { setIsDrawing(false); canvasRef.current.getContext("2d").beginPath(); }}
+          onMouseDown={startDrawing}
+          onMouseUp={stopDrawing}
           onMouseMove={draw}
-          onMouseOut={() => { setIsDrawing(false); canvasRef.current.getContext("2d").beginPath(); }}
+          onMouseOut={stopDrawing}
           className="w-full h-full"
         />
         <div className="absolute bottom-4 right-4 pointer-events-none opacity-30 text-xs italic">
-          Klik en sleep om te tekenen met de spinny brush (vertraagd!)
+          Klik en sleep om te tekenen
         </div>
       </div>
     </div>
@@ -222,7 +225,7 @@ export default function Lab() {
   const [brushSize, setBrushSize] = useState(5);
 
   const tabs = [
-    { id: "whiteboard", label: "Spinny Whiteboard", icon: "🎨" },
+    { id: "whiteboard", label: "Whiteboard", icon: "🎨" },
     { id: "tictactoe", label: "Boter-Kaas-en-Eieren", icon: "❌" },
     { id: "rps", label: "Steen Papier Schaar", icon: "✊" }
   ];
@@ -288,7 +291,7 @@ export default function Lab() {
               <div className="text-2xl mb-2">{tab.icon}</div>
               <h3 className="font-bold text-(--accent)">{tab.label}</h3>
               <p className="text-xs text-(--muted) mt-2 leading-relaxed">
-                {tab.id === "whiteboard" && "Tekenen met een roterende brush voor geometrische patronen."}
+                {tab.id === "whiteboard" && "Teken vrij op het whiteboard met aanpasbare kleuren en diktes."}
                 {tab.id === "tictactoe" && "Daag de computer uit voor een legendarisch potje boter-kaas-en-eieren."}
                 {tab.id === "rps" && "De ultieme test van geluk en ratio tegen de machine."}
               </p>
