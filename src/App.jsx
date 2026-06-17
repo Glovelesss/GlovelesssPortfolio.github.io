@@ -73,6 +73,7 @@ export default function App() {
 
             <Link to="/lab" className="hover:text-(--accent-secondary) transition-colors">Lab</Link>
             <Link to="/about" className="hover:text-(--accent) transition-colors">Over Mij</Link>
+            <Link to="/contact" className="hover:text-(--accent) transition-colors">Contact</Link>
           </nav>
         </div>
       </header>

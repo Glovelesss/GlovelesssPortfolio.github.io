@@ -35,7 +35,7 @@
       "id": "jumpquest",
       "title": "Jumpquest",
       "tagline": "Een platformer waarin ik Timelines en Animatie State Machines verkende.",
-      "description": "Jumpquest is een toffe platformer waar ik enorm veel plezier aan heb beleefd! Voor de visuals heb ik een assetpack gebruikt die we vanuit school kregen, waardoor ik me volledig kon focussen op het uitvogelen van de techniek.\n\nIn dit project ben ik voor het eerst de diepte ingedoken met Unity Timelines, het instellen van verschillende camera's en de complexe Unity Animation State Machine. Daarnaast heb ik een systeem gebouwd voor unlockable movement options, wat de gameplay steeds uitdagender maakt.",
+      "description": "Jumpquest is een toffe platformer waar ik enorm veel plezier aan heb beleefd! Voor de visuals heb ik een assetpack gebruikt die we vanuit school kregen, waardoor ik me volledig kon focussen op het uitvogelen van de techniek.\n\nIn dit project ben ik voor het eerst de diepte ingedoken met Unity Timelines, het instellen van verschillende camera's en de complexe Unity Animation State Machine. Daarnaast heb ik een systeem gebouwd voor unlockable movement options, wat de gameplay steeds Leuker maakt.",
       "thumbnail": "https://picsum.photos/seed/jumpquest/1200/600",
       "youtube": "",
       "screenshots": [
@@ -85,7 +85,7 @@
         "In Development"
       ],
       "projectRole": "Unreal Developer",
-      "timeline": "In Development",
+      "timeline": "In Development 8 Weken in totaal",
       "mechanics": [
         {
           "subtitle": "Unreal Engine",

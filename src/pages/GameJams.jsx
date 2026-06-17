@@ -20,7 +20,7 @@ export default function GameJams() {
               Game Jams
             </h1>
             <p className="text-lg text-(--muted) max-w-2xl mx-auto">
-              Creatieve experimenten en games ontwikkeld onder extreme tijdsdruk. 
+              Games ontwikkeld onder extreme tijdsdruk. 
               Hier test ik mijn skills in rapid prototyping en game design.
             </p>
           </motion.div>
