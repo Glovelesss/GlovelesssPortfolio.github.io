@@ -5,7 +5,7 @@
       "id": "curse-of-the-baby-mask",
       "title": "Curse of the baby mask",
       "tagline": "🏆 Glu Game jam Finalist & Winner 2026",
-      "description": "Curse of the baby mask is een prijswinnende game ontwikkeld tijdens de Glu Game Jam 2026. Binnen een zeer kort tijdsbestek hebben we een unieke, sfeervolle en gameplay-gedreven ervaring neergezet die de jury wist te overtuigen, resulterend in een finaleplek en uiteindelijk de grand prize.\n\nTijdens deze jam focuste ik op rapid prototyping, het implementeren van de core game loop, en het polijsten van de interacties onder hoge tijdsdruk. Dit project bewijst mijn vermogen om snel creatieve en technische beslissingen te nemen in een competitieve omgeving.",
+      "description": "Curse of the baby mask is een game ontwikkeld tijdens de Glu Game Jam 2026 Die het ook gewonnen heeft! Binnen een zeer korte tijd (36 uur) hebben we een unieke, Enge ervaring neergezet die onze medestudenten wist te overtuigen. \n\nTijdens deze jam focuste ik op Snel en efficient werken, het implementeren van de core game loop, en Mijn Werkmogelijkheid onder hoge tijdsdruk. Dit project bewijst mijn vermogen om snel creatieve en technische beslissingen te nemen in een competitieve omgeving.",
       "thumbnail": "https://picsum.photos/seed/cursemask/1200/600",
       "youtube": "https://www.youtube.com/embed/dQw4w9WgXcQ",
       "screenshots": [
@@ -18,18 +18,18 @@
         "Unity",
         "C#"
       ],
-      "projectRole": "Programmer / Designer",
-      "timeline": "48 Uur (Game Jam)",
+      "projectRole": "Programmer / Game Designer",
+      "timeline": "36 Uur (Game Jam)",
       "mechanics": [
         {
           "subtitle": "Rapid Prototyping",
-          "description": "Het snel itereren op een kernidee om te zorgen dat het leuk speelt voordat we tijd spendeerden aan art. De controls moesten onmiddellijk goed aanvoelen.",
+          "description": " ",
           "image": "https://placehold.co/600x400?text=Prototype",
           "code": "// Voorbeeld van rapid prototyping controls\nvoid Update() {\n    HandleMovement();\n    HandleMaskMechanics();\n}"
         }
       ],
       "git": "https://github.com/gloveless/curse-of-the-baby-mask",
-      "itch": "https://gloveless.itch.io/curse-of-the-baby-mask"
+      "itch": "https://qwertyde6e.itch.io/curse-of-the-baby-mask"
     },
     {
       "id": "asteroids-3d",
@@ -68,73 +68,46 @@
       "itch": "https://gloveless.itch.io/asteroids-3d"
     },
     {
-      "id": "xr-escape-room",
-      "title": "XR Escape Room",
-      "tagline": "Een VR escape room met physics puzzels en interacties.",
-      "description": "Deze XR escape room is ontwikkeld met Unity's XR Interaction Toolkit en plaatst spelers in een mysterieuze kamer vol interactieve puzzels. Elke puzzel kan op meerdere manieren opgelost worden, wat spelers de vrijheid geeft om creatief te denken.\n\nIk wilde onderzoeken hoe je natuurlijke interacties kunt bouwen met VR controllers waarbij physics-based interactions zorgen voor maximale immersion.\n\nHet project richtte zich op drie kernpijlers: natuurlijke object manipulatie, physics-based puzzels en environmental storytelling waarbij de ruimte zelf het verhaal vertelt.",
-      "thumbnail": "https://picsum.photos/seed/xr/1200/600",
-      "youtube": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      "id": "now-you-dye",
+      "title": "Now You Dye",
+      "tagline": "Een chaotische 3D Brawler geïnspireerd door Splatoon en Smash Bros!",
+      "description": "Now You Dye is een 3D Brawler die elementen combineert van Splatoon en Smash Bros. Dit groepsproject is momenteel nog volop in development, dus finale beelden zijn er nog niet.\n\nDit was voor ons een ontzettend Leerzaam project, omdat we hier voor het eerst Unreal Engine hebben gebruikt. Als ENIGE groep in de klas namen wij de Vette uitdaging aan om in Unreal te werken in plaats van Unity! Binnen het team heb ik mij volledig in de engine vastgebeten, waardoor ik nu Snel overweg kan met Blueprints en C++.",
+      "thumbnail": "https://picsum.photos/seed/dye/1200/600",
+      "youtube": "",
       "screenshots": [
-        "https://picsum.photos/seed/xr1/1200/800",
-        "https://picsum.photos/seed/xr2/1200/800",
-        "https://picsum.photos/seed/xr3/1200/800"
+        "https://picsum.photos/seed/dye1/1200/800",
+        "https://picsum.photos/seed/dye2/1200/800"
       ],
       "tags": [
-        "Unity",
-        "C#",
-        "XR",
-        "VR"
+        "Unreal Engine",
+        "Multiplayer",
+        "3D Brawler",
+        "In Development"
       ],
-      "projectRole": "XR Interaction Designer",
-      "timeline": "3 weken",
+      "projectRole": "Unreal Developer",
+      "timeline": "In Development",
       "mechanics": [
         {
-          "subtitle": "Grab Interaction",
-          "description": "Objecten worden fysiek opgepakt door middel van XR Grab Interactables waarbij physics properties dynamisch worden aangepast. Voor kleine objecten gebruik ik precision grabs, terwijl grote objecten velocity-based grabs gebruiken die natuurlijker aanvoelen. De throw mechanic tracked controller velocity over meerdere frames voor realistische gooibewegingen.",
-          "image": "https://placehold.co/600x400?text=Grab",
-          "code": "public void OnSelectEntered(SelectEnterEventArgs args)\n{\n    grabbed = true;\n    rb.isKinematic = true;\n}\n\npublic void OnSelectExited(SelectExitEventArgs args)\n{\n    grabbed = false;\n    rb.isKinematic = false;\n}"
-        }
-      ]
-    },
-    {
-      "id": "topdown-shooter",
-      "title": "Project Release",
-      "tagline": "Een snelle twin-stick shooter met vijandige AI.",
-      "description": "Deze topdown shooter begon als een experiment om enemy AI te bouwen en groeide uit tot een complete arcade-style game. Het doel was om tight, responsive controls te combineren met challenging maar faire enemy behaviors.\n\nLater werd het uitgebreid met verschillende enemy types, wave progression systems en satisfying hit-feedback door screen shake en particle effects te combineren.\n\nHet project hielp mij de basis van AI state machines, navmesh pathfinding en difficulty balancing beter te leren begrijpen.",
-      "thumbnail": "https://picsum.photos/seed/shooter/1200/600",
-      "youtube": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-      "screenshots": [
-        "https://picsum.photos/seed/shooter1/1200/800",
-        "https://picsum.photos/seed/shooter2/1200/800"
-      ],
-      "tags": [
-        "Unity",
-        "C#",
-        "AI",
-        "Topdown"
-      ],
-      "projectRole": "Programmer",
-      "timeline": "1 week",
-      "mechanics": [
-        {
-          "subtitle": "Enemy AI State Machine",
-          "description": "Een finite state machine voor vijanden die dynamisch schakelt tussen Idle → Chase → Attack → Retreat states. In Chase gebruiken enemies navmesh pathfinding, in Attack positioneren ze zich tactisch, en in Retreat trekken ze zich terug naar cover bij lage health. Verschillende enemy types hebben eigen parameters voor aggression range en attack patterns.",
-          "image": "https://placehold.co/600x400?text=Enemy+AI",
-          "code": "void Update()\n{\n    switch(state)\n    {\n        case Idle:\n            LookForPlayer();\n            break;\n\n        case Chase:\n            MoveTowardPlayer();\n            break;\n\n        case Attack:\n            TryShoot();\n            break;\n    }\n}"
+          "subtitle": "Unreal Engine",
+          "description": "Als enige groep in de klas hebben wij de overstap naar Unreal Engine gemaakt! Binnen het project nam ik het opzetten van de basis voor mijn rekening; door een mix van C++ en Blueprints te gebruiken, kon ik Snel complexe character movement en logica opzetten.",
+          "image": "https://placehold.co/600x400?text=Unreal+Engine",
+          "code": "// Voorbeeld C++ setup in Unreal\nvoid APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent) {\n    Super::SetupPlayerInputComponent(PlayerInputComponent);\n    PlayerInputComponent->BindAction(\"Jump\", IE_Pressed, this, &ACharacter::Jump);\n}"
         },
         {
-          "subtitle": "Projectile System",
-          "description": "Hit-detection via raycasts met instant feedback - veel sneller en accurater dan physics-based projectiles. De raycast spawned een hit effect op het impact point en gebruikt layer masks om te bepalen wat geraakt kan worden. Elk schot krijgt een tracer effect die de bullet path visualiseert.",
-          "image": "https://placehold.co/600x400?text=Projectile",
-          "code": "void Shoot()\n{\n    Ray ray = new Ray(transform.position, transform.forward);\n\n    if (Physics.Raycast(ray, out var hit, 50f))\n    {\n        Debug.Log($\"Hit {hit.collider.name}\");\n    }\n}"
+          "subtitle": "Blast Zone & Knockback",
+          "description": "Binnen het project heb ik me gefocust op toffe gameplay mechanics, zoals de Blast Zone (geïnspireerd op Smash Bros). Ik heb een invisible wall gemaakt die werkt met een knockback systeem op basis van een velocity check. Zodra een speler met te veel snelheid uit de arena wordt geslagen, is het game over. Erg gaaf om deze physics in Unreal werkend te krijgen!",
+          "image": "https://placehold.co/600x400?text=Blast+Zone",
+          "code": "// Voorbeeld van de Blast Zone velocity check\nvoid ABlastZone::OnOverlapBegin(AActor* OtherActor) {\n    if (ACharacter* Player = Cast<ACharacter>(OtherActor)) {\n        float Velocity = Player->GetVelocity().Size();\n        if (Velocity > KnockbackThreshold) {\n            EliminatePlayer(Player);\n        }\n    }\n}"
         }
-      ]
+      ],
+      "git": "",
+      "itch": "https://drathebean.itch.io/now-you-dye"
     },
     {
-      "id": "vr-training-sim",
+      "id": "immersive-installatie",
       "title": "Immersive Installatie",
-      "tagline": "Een realistische VR-training voor industriële procedures.",
-      "description": "Deze VR training simulator is gebouwd voor het oefenen van complexe industriële procedures in een volledig veilige virtuele omgeving. Het doel was om een training te creëren die net zo effectief is als hands-on training, maar zonder de risico's en kosten.\n\nDe focus lag op realistische hand-tracking voor natuurlijke interacties, stapsgewijze instructies die gebruikers begeleiden en gedetailleerde feedback op gebruikersacties waarbij immediate feedback het leerproces versterkt.\n\nHet project leerde mij hoe je effectieve VR training ervaringen ontwerpt met verschillende difficulty modes en performance tracking om daadwerkelijk kennisoverdracht te bevorderen.",
+      "tagline": "Een fysieke portal aangedreven door een Raspberry Pi.",
+      "description": "Voor de Immersive Installatie zijn we als groep met de Raspberry Pi aan de slag gegaan! Het was een Vette uitdaging omdat we hebben geleerd om iets te bouwen volledig buiten een game engine om.\n\nSamen hebben we een interactieve Portal neergezet met twee hoofdonderdelen: een vragenlijst stand en een videocall stand. Dit project bewijst mijn vermogen om in een team Snel nieuwe technologieën en hardware eigen te maken en creatieve oplossingen te bouwen.",
       "thumbnail": "https://picsum.photos/seed/vrtrain/1200/600",
       "youtube": "https://www.youtube.com/embed/dQw4w9WgXcQ",
       "screenshots": [
@@ -143,65 +116,58 @@
         "https://picsum.photos/seed/vrt3/1200/800"
       ],
       "tags": [
-        "Unity",
-        "VR",
-        "Hand Tracking",
-        "Training"
+        "Geen Engine",
+        "Raspberry PI",
+        "Portal"
       ],
-      "projectRole": "VR Developer",
-      "timeline": "4 weken",
+      "projectRole": "Developer",
+      "timeline": "4 Weken",
       "mechanics": [
         {
-          "subtitle": "Step-by-Step Guide System",
-          "description": "Een dynamisch instructiesysteem dat de gebruiker door complexe multi-step procedures leidt met real-time visual guidance. Elke step heeft validation criteria die checken of de actie correct is uitgevoerd. In guided mode krijg je hints als je te lang stilstaat, terwijl advanced mode minimale assists heeft voor realistischere training.",
-          "image": "https://placehold.co/600x400?text=Guide+System",
-          "code": "public class StepGuide : MonoBehaviour\n{\n    public List<TrainingStep> steps;\n    private int currentStep = 0;\n\n    void CheckStepCompletion()\n    {\n        if (steps[currentStep].IsCompleted())\n        {\n            currentStep++;\n            ShowNextInstruction();\n        }\n    }\n}"
+          "subtitle": "Vragenlijst Stand",
+          "description": "Een interactieve stand om bezoekers door een vragenlijst te leiden. Omdat we zonder engine werkten, heb ik de logica voor de flow en input afhandeling op de Raspberry Pi voor mijn rekening genomen, wat een Erg leerzame ervaring was!",
+          "image": "https://placehold.co/600x400?text=Vragenlijst",
+          "code": "// Basis opzet voor de vragenlijst\ndef handle_answer(answer):\n    save_to_db(answer)\n    show_next_question()"
         },
         {
-          "subtitle": "Hand Tracking Validation",
-          "description": "Controleert of handposities en hand poses correct zijn voor specifieke acties door palm orientation en finger positions te valideren. Wanneer je grip incorrect is, verschijnt een ghost hand overlay die de correcte positie toont. Dit is veel effectiever dan tekstuele instructies omdat mensen de juiste pose kunnen imiteren.",
-          "image": "https://placehold.co/600x400?text=Hand+Tracking",
-          "code": "bool ValidateHandPose(HandPose required)\n{\n    float similarity = Vector3.Dot(\n        currentPose.palmNormal,\n        required.palmNormal\n    );\n\n    return similarity > 0.95f;\n}"
+          "subtitle": "Videocall Stand",
+          "description": "Dit onderdeel verbindt gebruikers via een videocall in de portal. Het aansturen van de camera en het streamen van de videofeed op de Pi was een toffe technische uitdaging die Zeer goed gelukt is.",
+          "image": "https://placehold.co/600x400?text=Videocall",
+          "code": "// Opzetten van de video verbinding\ndef start_video_stream():\n    camera = init_camera()\n    connect_stream(camera)"
         }
       ],
-      "git": "https://github.com/gloveless/vr-training-sim",
+      "git": "https://github.com/gloveless/immersive-installatie",
       "itch": ""
     },
     {
-      "id": "ar-museum-guide",
-      "title": "AR Museum Guide",
-      "tagline": "Een interactieve AR-applicatie voor museum bezoekers.",
-      "description": "De AR Museum Guide brengt museumtentoonstellingen tot leven door digitale content over fysieke objecten heen te projecteren en transformeert statische kunstwerken in interactieve verhalen. Een Romeins schilderij komt tot leven met animated characters, bij fossielen verschijnen 3D reconstructies.\n\nGebruikers kunnen hun telefoon op kunstwerken richten om extra informatie, 3D modellen en interactieve elementen te zien die historical context bieden op een engaging manier.\n\nDit project introduceerde mij in AR Foundation, image tracking en UI design voor augmented reality waarbij ik leerde werken met verschillende lighting conditions in musea.",
-      "thumbnail": "https://picsum.photos/seed/armuseum/1200/600",
+      "id": "compute-and-comply",
+      "title": "Compute and comply",
+      "tagline": "Submission to GLU VR shooter 2025",
+      "description": "Compute and comply is een game ontwikkeld door 6 studenten in 3 weken voor de GLU VR shooter 2025! In deze game word je naar een vervallen fabriek gestuurd om een speciale harde schijf te bemachtigen, maar dit blijkt moeilijker dan verwacht.\n\nTijdens dit project focuste ik op Samenwerken, het implementeren van de core mechanics, en Mijn Werkmogelijkheid binnen een team van devs en artists. Dit project bewijst mijn vermogen om in teamverband te werken en snel een Vette VR ervaring neer te zetten.",
+      "thumbnail": "https://picsum.photos/seed/compute/1200/600",
       "youtube": "https://www.youtube.com/embed/dQw4w9WgXcQ",
       "screenshots": [
-        "https://picsum.photos/seed/arm1/1200/800",
-        "https://picsum.photos/seed/arm2/1200/800"
+        "https://picsum.photos/seed/comp1/1200/800",
+        "https://picsum.photos/seed/comp2/1200/800"
       ],
       "tags": [
         "Unity",
-        "AR Foundation",
-        "Mobile",
-        "Image Tracking"
+        "VR",
+        "Shooter",
+        "C#"
       ],
-      "projectRole": "AR Developer",
-      "timeline": "3 weken",
+      "projectRole": "Developer",
+      "timeline": "3 Weken",
       "mechanics": [
         {
-          "subtitle": "Image Tracking System",
-          "description": "Herkent kunstwerken en plaatst AR content op de juiste posities door gebruik te maken van AR Foundation's image tracking. Wanneer een artwork gedetecteerd wordt, spawned het systeem de bijbehorende content - info panels, 3D modellen of video overlays. De content blijft stabiel geanchored zelfs als de camera beweegt.",
-          "image": "https://placehold.co/600x400?text=Image+Tracking",
-          "code": "void OnTrackedImagesChanged(ARTrackedImagesChangedEventArgs args)\n{\n    foreach (var trackedImage in args.added)\n    {\n        string artworkId = trackedImage.referenceImage.name;\n        SpawnARContent(artworkId, trackedImage.transform);\n    }\n}"
-        },
-        {
-          "subtitle": "Interactive 3D Models",
-          "description": "Gebruikers kunnen 3D modellen roteren en schalen met intuïtive touch gestures - single finger drag roteert, pinch zoom schaalt en two-finger drag verplaatst het model. Sommige modellen zijn animated en kunnen hun functie demonstreren. Custom shaders zorgen dat de modellen natuurlijk blenden met de real world door environment lighting.",
-          "image": "https://placehold.co/600x400?text=3D+Interaction",
-          "code": "void HandleTouchInput()\n{\n    if (Input.touchCount == 2)\n    {\n        Touch t1 = Input.GetTouch(0);\n        Touch t2 = Input.GetTouch(1);\n\n        float pinchDist = Vector2.Distance(t1.position, t2.position);\n        float scale = pinchDist / initialPinchDist;\n\n        model.localScale = initialScale * scale;\n    }\n}"
+          "subtitle": "VR Shooting Mechanics",
+          "description": "Voor de VR mechanics heb ik gefocust op het creëren van een Lekkere en Vlotte schietervaring. Door gebruik te maken van Raycasts en haptic feedback voelt elk schot impactvol aan! Ook heb ik gewerkt aan interacties zodat je Snel weer door kon schieten in de fabriek.",
+          "image": "https://placehold.co/600x400?text=VR+Shooting",
+          "code": "// Basis van de shooting interactie\npublic void Shoot() {\n    RaycastHit hit;\n    if (Physics.Raycast(gunBarrel.position, gunBarrel.forward, out hit)) {\n        DealDamage(hit.collider);\n        TriggerHaptics();\n    }\n}"
         }
       ],
       "git": "",
-      "itch": "https://gloveless.itch.io/ar-museum"
+      "itch": "https://sharktail123.itch.io/compute-comply"
     }
   ]
 }
