@@ -77,20 +77,9 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family: var(--font-main);
-  transition: background-color 3s ease-in-out;
 }
 
-@keyframes colorCycle {
-  0% { background-color: #111827; }
-  33% { background-color: #1e1b4b; }
-  66% { background-color: #1e3a8a; }
-  100% { background-color: #111827; }
-}
 
-.bg-animated {
-  background-color: #111827 !important;
-  animation: colorCycle 10s ease-in-out infinite !important;
-}
 
 .container {
   max-width: 80rem;

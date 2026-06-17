@@ -16,15 +16,7 @@ export default function App() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  // Randomize background color over time
-  useEffect(() => {
-    const interval = setInterval(() => {
-      const randomHue = Math.floor(Math.random() * 360);
-      document.documentElement.style.setProperty('--theme-hue', randomHue);
-    }, 5000); // Change color every 5 seconds
 
-    return () => clearInterval(interval);
-  }, []);
 
   return (
     <div className="min-h-screen flex flex-col bg-(--bg) text-(--text)">

@@ -19,7 +19,7 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-animated border-b border-(--bordercolor)">
+    <header className="sticky top-0 z-50 bg-(--surface)/80 backdrop-blur-md border-b border-(--bordercolor)">
       <nav className="container mx-auto px-4 h-16 flex items-center justify-between">
         {/* Logo / Site naam */}
         <Link 
