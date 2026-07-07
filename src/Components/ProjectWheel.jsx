@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
+import { assetUrl } from "../utils/assetUrl";
 
 export default function ProjectWheel({ projects }) {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -137,7 +138,7 @@ export default function ProjectWheel({ projects }) {
                   {/* Thumbnail */}
                   <div className="wheel-card__image">
                     <img
-                      src={project.thumbnail}
+                      src={assetUrl(project.thumbnail)}
                       alt={project.title}
                       draggable={false}
                     />

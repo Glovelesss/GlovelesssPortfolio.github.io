@@ -3,6 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import projectData from "../Data/projectdata.json";
 import PageTransition from "../Components/PageTransition";
+import { assetUrl } from "../utils/assetUrl";
 
 export default function ProjectDetail() {
   const { id } = useParams();
@@ -29,7 +30,7 @@ export default function ProjectDetail() {
         {/* Hero Banner */}
         <section className="relative h-[50vh] min-h-[400px] overflow-hidden">
           <img 
-            src={project.thumbnail} 
+            src={assetUrl(project.thumbnail)} 
             alt={project.title} 
             className="w-full h-full object-cover"
           />
@@ -107,7 +108,7 @@ export default function ProjectDetail() {
                     whileHover={{ scale: 1.02 }}
                     className="rounded-xl overflow-hidden border border-(--bordercolor)"
                   >
-                    <img src={src} alt={`${project.title} screenshot ${index + 1}`} className="w-full h-auto" />
+                    <img src={assetUrl(src)} alt={`${project.title} screenshot ${index + 1}`} className="w-full h-auto" />
                   </motion.div>
                 ))}
                 {/* Extra placeholder images as requested */}

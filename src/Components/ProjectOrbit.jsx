@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
+import { assetUrl } from "../utils/assetUrl";
 
 export default function ProjectOrbit({ projects }) {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -96,7 +97,7 @@ export default function ProjectOrbit({ projects }) {
                 >
                   <div className="orbit-card__image-container">
                     <img 
-                      src={project.thumbnail} 
+                      src={assetUrl(project.thumbnail)} 
                       alt={project.title} 
                       className="orbit-card__image"
                     />

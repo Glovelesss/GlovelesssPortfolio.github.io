@@ -1,5 +1,6 @@
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { assetUrl } from "../../utils/assetUrl";
 
 export default function ProjectMechanics({ project }) {
   // Skip als er geen mechanics zijn
@@ -39,9 +40,9 @@ export default function ProjectMechanics({ project }) {
 
             {/* Preview image */}
             {m.image && (
-              <a href={m.image} target="_blank" rel="noopener noreferrer">
+              <a href={assetUrl(m.image)} target="_blank" rel="noopener noreferrer">
                 <img
-                  src={m.image}
+                  src={assetUrl(m.image)}
                   alt={m.subtitle}
                   className="w-full h-60 object-cover rounded-lg cursor-pointer hover:opacity-80 transition-opacity"
                 />

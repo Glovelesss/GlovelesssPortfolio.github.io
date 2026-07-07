@@ -1,9 +1,11 @@
+import { assetUrl } from "../../utils/assetUrl";
+
 export default function ProjectHeader({ project }) {
   return (
     <div className="relative w-full mb-4 overflow-hidden">
       {/* Banner Image */}
       <img 
-        src={project.thumbnail} 
+        src={assetUrl(project.thumbnail)} 
         alt={project.title} 
         className="w-full h-48 sm:h-64 object-cover" 
       />

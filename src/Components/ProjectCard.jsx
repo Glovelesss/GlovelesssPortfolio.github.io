@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { assetUrl } from "../utils/assetUrl";
 
 export default function ProjectCard({ project, isLarge, index }) {
   // Bepaal thema op basis van index voor variatie
@@ -110,7 +111,7 @@ export default function ProjectCard({ project, isLarge, index }) {
         {/* Thumbnail met overlay */}
         <div className={`relative overflow-hidden ${isLarge ? 'aspect-video md:aspect-auto md:h-full' : 'aspect-video'} z-10`}>
           <motion.img 
-            src={project.thumbnail} 
+            src={assetUrl(project.thumbnail)} 
             alt={project.title} 
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
           />
