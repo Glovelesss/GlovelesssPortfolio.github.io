@@ -75,10 +75,12 @@
       "thumbnail": "/screenshots/now-you-dye/banner.png",
       "youtube": "",
       "screenshots": [
+        "/screenshots/now-you-dye/banner.png",
         "/screenshots/now-you-dye/gameplay.jpg",
         "/screenshots/now-you-dye/blueprint.png",
         "/screenshots/now-you-dye/material.png",
-        "/screenshots/now-you-dye/blast-zone.png"
+        "/screenshots/now-you-dye/blast-zone.png",
+        "/screenshots/now-you-dye/devs.png"
       ],
       "tags": [
         "Unreal Engine",
